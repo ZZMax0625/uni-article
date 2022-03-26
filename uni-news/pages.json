@@ -1,36 +1,44 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/login/login",
-			"style": {
-				"navigationStyle": "custom",
-				"navigationBarTextStyle":"black"
-			}
-
-		},
-		{
 			"path": "pages/my/my",
 			"style": {
-				"navigationBarTitleText": "我的",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"titleNView": {
-						"buttons": [{
-							"type": "menu"
-						}]
-					}
-				}
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white"
+				// "navigationBarTitleText": "我的",
+				// "app-plus": {
+				// 	"titleNView": {
+				// 		"buttons": [{
+				// 			"type": "menu"
+				// 		}]
+				// 	}
+				// }
+			}
+		},
+		{
+			"path": "pages/dynamic/dynamic",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": true
 			}
 
 		},
-
 		{
-			"path": "pages/setting/setting",
+			"path": "pages/user-edit/user-edit",
 			"style": {
-				"navigationBarTitleText": "设置",
+				"navigationBarTitleText": "资料编辑",
 				"enablePullDownRefresh": false
 			}
 
+		},
+
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
 		},
 		{
 			"path": "pages/index/index",
@@ -42,7 +50,6 @@
 							"align": "center",
 							"backgroundColor": "#F5F4F2",
 							"borderRadius": "4px",
-							"disabled": true,
 							"placeholder": "搜索",
 							"placeholderColor": "#6F6C67"
 						},
@@ -57,7 +64,8 @@
 					}
 				}
 			}
-		}, {
+		},
+		{
 			"path": "pages/msg/msg",
 			"style": {
 				"navigationBarTitleText": "消息",
@@ -85,49 +93,97 @@
 				}
 			}
 
-		}, {
-			"path": "pages/news/news",
+		},
+		{
+			"path": "pages/settings/settings",
 			"style": {
-				"navigationBarTitleText": "消息",
+				"navigationBarTitleText": "设置",
 				"enablePullDownRefresh": false
 			}
 
 		}
 
-	],
+		, {
+			"path": "pages/user-safe/user-safe",
+			"style": {
+				"navigationBarTitleText": "账号安全",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/edit-password/edit-password",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于社区",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user-feedback/user-feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	    ,{
+            "path" : "pages/bind-phone/bind-phone",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "绑定手机号",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "我的应用",
 		"navigationBarBackgroundColor": "#FC5C82",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"pageOrientation": "portrait", //横屏配置，全局屏幕旋转设置(仅 APP/微信/QQ小程序)，支持 auto / portrait / landscape
+		"rpxCalcMaxDeviceWidth": 960,
+		"rpxCalcBaseDeviceWidth": 375,
+		"rpxCalcIncludeWidth": 750
 	},
 	"tabBar": {
 		"color": "#333333",
+		"borderStyle": "black",
 		"selectedColor": "#FC5C82",
 		"backgroundColor": "#FFFFFF",
+		"height": "50px",
+		"fontSize": "14px",
+		"iconWidth": "20px",
+		"spacing": "3px",
 		"list": [{
 				"pagePath": "pages/index/index",
 				"text": "首页",
 				"iconPath": "static/tabbar/index.png",
-				"selectedIconPath": "static/tabbar/indexed.png"
+				"selectedIconPath": "static/tabbar/index-active.png"
 			},
 			{
-				"pagePath": "pages/news/news",
+				"pagePath": "pages/dynamic/dynamic",
 				"text": "动态",
-				"iconPath": "static/tabbar/paper.png",
-				"selectedIconPath": "static/tabbar/papered.png"
+				"iconPath": "static/tabbar/dynamic.png",
+				"selectedIconPath": "static/tabbar/dynamic-active.png"
 			},
 			{
 				"pagePath": "pages/msg/msg",
 				"text": "消息",
-				"iconPath": "static/tabbar/news.png",
-				"selectedIconPath": "static/tabbar/newsed.png"
+				"iconPath": "static/tabbar/msg.png",
+				"selectedIconPath": "static/tabbar/msg-active.png"
 			},
 			{
 				"pagePath": "pages/my/my",
 				"text": "我的",
-				"iconPath": "static/tabbar/home.png",
-				"selectedIconPath": "./static/tabbar/homeed.png"
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/my-active.png"
 			}
 		]
 	}

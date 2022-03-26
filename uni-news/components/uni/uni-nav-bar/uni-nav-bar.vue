@@ -66,7 +66,7 @@
 			},
 			fixed: {
 				type: [Boolean, String],
-				default: false
+				default: true
 			},
 			color: {
 				type: String,

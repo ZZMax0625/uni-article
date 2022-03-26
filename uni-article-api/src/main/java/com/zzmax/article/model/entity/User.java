@@ -27,5 +27,6 @@ public class User {
     private LocalDate birthday;
     private String address;
     private Date createTime;
+    private String banner;
 
 }

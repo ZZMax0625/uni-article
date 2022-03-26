@@ -13,16 +13,16 @@
 </script>
 
 <style>
-	@import url("./common/base.css");
-	@import url("./common/icon.css");
-	@import url("./common/style.css");
+	@import './common/icon.css';
+	@import './common/base.css';
+	@import './common/style.css';
 
 	page {
-		background-color: #f6f6f6;
-		height: 100%;
+		background: #f6f6f6;
+		height: 100vh;
 	}
-	
-	::-webkit-scrollbar{
+
+	::-webkit-scrollbar {
 		display: none;
 	}
 </style>

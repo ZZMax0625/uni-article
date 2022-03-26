@@ -1,6 +1,8 @@
 server:
   port: 8081
 spring:
+  redis:
+    host: 127.0.0.1
   application:
     name: uni-article-api
   datasource: # 数据源的相关配置

@@ -19,7 +19,6 @@
 					<switch v-if="showSwitch" :disabled="disabled" :checked="switchChecked" @change="onSwitchChange" />
 					<uni-icons v-if="showArrow" :size="20" class="uni-icon-wrapper" color="#bbb" type="arrowright" />
 				</slot>
-				
 			</view>
 		</view>
 	</view>

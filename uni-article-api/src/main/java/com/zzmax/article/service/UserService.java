@@ -1,9 +1,9 @@
 package com.zzmax.article.service;
 
 import com.zzmax.article.model.dto.LoginDto;
+import com.zzmax.article.model.dto.WxLoginDto;
 import com.zzmax.article.model.entity.User;
-
-import java.time.LocalDate;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface UserService {
 
@@ -18,4 +18,32 @@ public interface UserService {
      * @return user对象
      */
     User getUser(String phone);
+
+    public boolean loginByCode(LoginDto loginDto);
+
+    /**
+     * 微信登录
+     */
+    User wxLogin(WxLoginDto wxLoginDto);
+
+    /**
+     * 根据微信openId查询
+     */
+    User findByOpenId(String wxOpenId);
+
+    /**
+     * 修改用户信息
+     *
+     * @param user 用户对象
+     * @return User
+     */
+    User updateUser(User user);
+
+    /**
+     * 上传文件到OSS
+     *
+     * @param file 文件对象
+     * @return 上传后的url
+     */
+    String uploadFile(MultipartFile file);
 }
